@@ -1,5 +1,5 @@
 .featured {
-  flex: 4;
+  flex: 2;
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
   box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
 
@@ -60,6 +60,7 @@
             align-items: center;
             margin-top: 10px;
             font-size: 14px;
+            // margin-bottom: 2rem;
 
             &.positive{
                 color: green;
