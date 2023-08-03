@@ -29,7 +29,7 @@ const Sidebar = () => {
                     <Dashboard className='icon'/>
                      <span>Users</span>
                      </li>
-                     <p className='title'> Users</p>
+                     <p className='title'>Users</p>
                 <li>
                
                     <PersonOutlineIcon className='icon' />
