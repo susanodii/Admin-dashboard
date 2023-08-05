@@ -1,5 +1,6 @@
 import  './sidebar.scss'
 
+import {DarkModeContext} from "../../context/darkModeContext";
 import Dashboard from '@mui/icons-material/Dashboard';
 import Face4Icon from '@mui/icons-material/Face4';
 import {Link} from "react-router-dom"
@@ -11,11 +12,14 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ReorderIcon from '@mui/icons-material/Reorder';
 import SettingsInputComponentIcon from '@mui/icons-material/SettingsInputComponent';
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
+import { useContext } from "react";
 
 // import DashboardIcon from '@mui/icons-material/Dashboard';
 
 
 const Sidebar = () => {
+
+    const {dispatch} = useContext(DarkModeContext)
   return (
     <div className='sidebar'>
 
@@ -102,8 +106,8 @@ const Sidebar = () => {
         </div>
  <div className='bottom'>
     
-    <div className='colorOption'></div>
-    <div  className='colorOption'></div>
+    <div className='colorOption' onClick={()=> dispatch({type :"LIGHT" })}></div>
+    <div  className='colorOption'  onClick={()=> dispatch({type :"DARK" })}></div>
    
      </div>
     </div>
