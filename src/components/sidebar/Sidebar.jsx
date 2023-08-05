@@ -2,6 +2,7 @@ import  './sidebar.scss'
 
 import Dashboard from '@mui/icons-material/Dashboard';
 import Face4Icon from '@mui/icons-material/Face4';
+import {Link} from "react-router-dom"
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -19,7 +20,9 @@ const Sidebar = () => {
     <div className='sidebar'>
 
         <div className='top'> 
+        <Link to="/" style={{textDecoration:"none"}}>
         <span className='logo'> SUZY</span>
+        </Link>
         </div>
 <hr/>
         <div className='center'>
@@ -27,14 +30,30 @@ const Sidebar = () => {
                 <p className='title'> Main</p>
                 <li>
                     <Dashboard className='icon'/>
-                     <span>Users</span>
+                     <span>Dashboard</span>
                      </li>
-                     <p className='title'>Users</p>
+                     <p className='title'>List</p>
+                <Link  to="/Users" style={{textDecoration:"none"}}>
                 <li>
                
-                    <PersonOutlineIcon className='icon' />
-                     <span>Orders</span>
+               <PersonOutlineIcon className='icon' />
+                <span>Users</span>
+                </li>
+                </Link>
+                
+               
+                <li>
+                    <Dashboard className='icon'/>
+                     <span>products</span>
                      </li>
+                     <p className='title'>List</p>
+                <Link  to="/products" style={{textDecoration:"none"}}>
+                <li>
+               
+               <ReorderIcon className='icon' />
+                <span>produts</span>
+                </li>
+                </Link>
                      
                 <li>
                      <LocalShippingIcon  className='icon'/>
